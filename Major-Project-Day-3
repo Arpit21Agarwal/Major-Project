@@ -1,0 +1,907 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>
+            SB Admin 2 - Bootstrap Admin Theme
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            .headin{
+                color:gray;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                font-weight: lighter;
+                padding:10px;
+                margin:5px;
+            }
+            .lists{
+                float: right;
+            }
+            .headincolor{
+                background:rgb(221, 221, 221);
+            }
+            em{
+                color: gray;
+            }
+            .lighter{
+                color: gray;
+            }
+            button{
+                margin-right: 4.5px;
+            }
+            .search{
+                padding:5 5 5 12;
+                margin-left:15px;
+                border-radius:5px;
+                border:1px solid lightgray;
+            }
+            .dashboard{
+                padding-top:15px;
+            }
+            .pad{
+                padding:2px;
+            }
+        </style>
+        <script type="text/javascript" src="canvasjs.min.js"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+              var chart1 = new CanvasJS.Chart("chartContainer1",
+              {
+                data: [
+                {
+                  type: "stackedArea",
+                  name: "iPhone",
+                  dataPoints: [
+                  { x: new Date(2010, 01, 1), y: 2666 },
+                  { x: new Date(2010, 04, 1), y: 2778 },
+                  { x: new Date(2010, 07, 1), y: 4912},
+                  { x: new Date(2010, 10, 1), y: 3767 },
+                  { x: new Date(2011, 01, 1), y: 6810 },
+                  { x: new Date(2011, 04, 1), y: 5670 },
+                  { x: new Date(2011, 07, 1), y: 4820 },
+                  { x: new Date(2011, 10, 1), y: 15073 },
+                  { x: new Date(2012, 01, 1), y: 10687 },
+                  { x: new Date(2012, 04, 1), y: 8432 }
+          
+                  ]
+                },
+                {
+                  type: "stackedArea",
+                  name: "iPad",
+                  dataPoints: [
+                  { x: new Date(2010, 01, 1), y: 0 },
+                  { x: new Date(2010, 04, 1), y: 2294 },
+                  { x: new Date(2010, 07, 1), y: 1969},
+                  { x: new Date(2010, 10, 1), y: 3597 },
+                  { x: new Date(2011, 01, 1), y: 1914 },
+                  { x: new Date(2011, 04, 1), y: 4293 },
+                  { x: new Date(2011, 07, 1), y: 3795 },
+                  { x: new Date(2011, 10, 1), y: 5967 },
+                  { x: new Date(2012, 01, 1), y: 4460 },
+                  { x: new Date(2012, 04, 1), y: 5713 }
+          
+                  ]
+                },
+                {
+                  type: "stackedArea",
+                  name:"iPod Touch",
+                  dataPoints: [
+                  { x: new Date(2010, 01, 1), y: 2647 },
+                  { x: new Date(2010, 04, 1), y: 2441 },
+                  { x: new Date(2010, 07, 1), y: 2501 },
+                  { x: new Date(2010, 10, 1), y: 5689 },
+                  { x: new Date(2011, 01, 1), y: 2293 },
+                  { x: new Date(2011, 04, 1), y: 1881 },
+                  { x: new Date(2011, 07, 1), y: 1588 },
+                  { x: new Date(2011, 10, 1), y: 5175 },
+                  { x: new Date(2012, 01, 1), y: 2028 },
+                  { x: new Date(2012, 04, 1), y: 1791 }
+          
+                  ]
+                },
+                ],
+                toolTip: {
+                    shared: true
+                },
+              });
+          chart1.render();
+          }
+          </script>
+          <script type="text/javascript">
+            window.onload = function () {
+                CanvasJS.addColorSet("blueShades",
+                [
+                    "#004D93",
+                    "#6199CB",
+                    "#4284BF"
+                ]);
+              var chart2 = new CanvasJS.Chart("chartContainer2",
+              {
+                colorSet:"blueShades",
+                animationEnabled: true,
+                data: [
+                {
+                 type: "doughnut",
+                 dataPoints: [
+                 {  y: 12, indexLabel: "Download Sales" },
+                 {  y: 20, indexLabel: "Mail-Order Sales" },
+                 {  y: 30, indexLabel: "In-Store Sales" },
+                 ]
+               }
+               ]
+             });
+          
+              chart2.render();
+            }
+            </script>
+    </head>
+    <body>
+        <header class="headincolor">
+            <br>
+            <span class="headin">SB Admin v2.0</span>
+            <div class="lists">
+                <div class="btn-group">
+                        <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown"><img src=".\download.png" width="30px" height="30px"><span class="caret"></span></button>
+                        <ul class="dropdown-menu pull-right">
+                        <li>
+                                <a href="#">
+                                    <strong>John Smith</strong>
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                    <em>Yesterday</em>
+                                    <br>Lorem ipsum dolor sit amet, consectetur
+                                    <br>adipiscing elit. Pellentesque eleifend...
+                                </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                                <a href="#">
+                                    <strong>John Smith</strong>
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                    <em>Yesterday</em>
+                                    <br>Lorem ipsum dolor sit amet, consectetur
+                                    <br>adipiscing elit. Pellentesque eleifend...
+                                </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                                <a href="#">
+                                    <strong>John Smith</strong>
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                    <em>Yesterday</em>
+                                    <br>Lorem ipsum dolor sit amet, consectetur
+                                    <br>adipiscing elit. Pellentesque eleifend...
+                                </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#"><strong><center>Read All Messages ></center></strong></a></li>
+                        </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown"><img src=".\download (1).png" width="30px" height="30px" style="padding: 1 0"><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right">
+                        <li>
+                            <a href="#">
+                                <strong>Task 1</strong>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <span class="lighter">40% Complete</span>
+                                <br><br>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <strong>Task 2</strong>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <span class="lighter">20% Complete</span>
+                                <br><br>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <strong>Task 3</strong>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <span class="lighter">60% Complete</span>
+                                <br><br>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
+                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <strong>Task 4</strong>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <span class="lighter">80% Complete</span>
+                                <br><br>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
+                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#"><strong><center>See All Tasks ></center></strong></a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><img src=".\download (2).png" width="30px" height="30px" style="padding: 3.5 0"><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right">
+                        <li>
+                            <a href="#">
+                                <img src="./1.0.png" height="15px" width="15px">
+                                &nbsp;New Comment
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <span class="lighter">4 minutes ago</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <img src="./2.0.png" height="15px" width="15px">
+                                &nbsp;3 New Followers
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <span class="lighter">12 minutes ago</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <img src="./email.png" height="15px" width="15px">
+                                &nbsp;Message Sent
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                                <span class="lighter">4 minutes ago</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <img src="./3.0.png" height="15px" width="15px">
+                                &nbsp;New Task
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                                <span class="lighter">4 minutes ago</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <img src="./4.0.png" height="15px" width="15px">
+                                &nbsp;Server Reboot
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                                <span class="lighter">4 minutes ago</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#"><strong><center>See All Alerts ></center></strong></a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><img src=".\1.png" width="30px" height="30px" style="padding: 5px"><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right">
+                        <li>
+                            <a href="#">
+                                <img src="./name.png" height="15px" width="15px">
+                                &nbsp;User Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./6.0.png" height="15px" width="15px">
+                                &nbsp;Settings
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <img src="./7.0.png" height="15px" width="15px">
+                                &nbsp;Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </header>
+        <div>
+            <div>
+            <form class="navbar-form navbar-left">
+                <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search..." name="search">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                    <img src="./search.png" height="20px" width="20px">
+                    </button>
+                </div>
+                </div>
+            </form>
+            </div>
+            <span><h1 class="dashboard">Dashboard</h1></span>
+            <hr width="82%" align="right">
+            
+            <span>
+            <div class="btn-group-vertical" style="padding-left: 15px">
+                <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="Major-Project.html"><img src="./01.png" height="17px">&nbsp;Dashboard</a></button>
+                <button type="button" class="btn btn-light" style="border: 1px solid gray" data-toggle="collapse" data-target="#qwe"><a><img src="./02.png" height="17px">&nbsp;Charts ></a></button>
+                <div id="qwe" class="collapse">
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="flotcharts.html">Flot Charts</a></button>
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="morrisjscharts.html">Morris.js Charts</a></button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="tables.html"><img src="./03.png" height="17px">&nbsp;Tables</a></button>
+                <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="forms.html"><img src="./04.png" height="17px">&nbsp;Forms</a></button>
+                <button type="button" class="btn btn-light" style="border: 1px solid gray" data-toggle="collapse" data-target="#asd"><a><img src="./05.png" height="17px">&nbsp;UI Elements ></a></button>
+                <div id="asd" class="collapse">
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="panelsandwells.html">Panels and Well</a></button>
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="buttons.html">Buttons</a></button>
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="notifications.html">Notifications</a></button>
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="typography.html">Typography</a></button>
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="icons.html">Icons</a></button>
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="grid.html">Grid</a></button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-light" style="border: 1px solid gray" data-toggle="collapse" data-target="#zxc"><a><img src="./06.png" height="17px">&nbsp;Multi-Level Dropdown ></a></button>
+                  <div id="zxc" class="collapse">
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="secondlvl.html">Second Level Item</a></button>
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="secondlvl.html">Second Level Item</a></button>
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray" data-toggle="collapse" data-target="#cvb"><a>Third Level ></a></button>
+                        <div id="cvb" class="collapse">
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="thirdlvl.html">Third Level Item</a></button>
+                                <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="thirdlvl.html">Third Level Item</a></button>
+                                <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="thirdlvl.html">Third Level Item</a></button>
+                                <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="thirdlvl.html">Third Level Item</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-light" style="border: 1px solid gray" data-toggle="collapse" data-target="#poi"><a><img src="./07.png" height="17px">&nbsp;Sample Pages ></a></button>
+                <div id="poi" class="collapse">
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="blanpage.html">Blank Page</a></button>
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray"><a href="loginpage.html">Login Page</a></button>
+                    </div>
+                </div>            
+            </div>
+            </span>
+            <div style="float: right;">
+                    <div class="col-lg-5">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div>
+                                    <img src="./c.png" height="70px">
+                                    <h1 style="float: right">26</h1>
+                                    <div align="right">New Comments!</div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <a href="#">View Details<div style="float:right">></div></a>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-lg-5">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div>
+                                        <img src="./d.png" height="70px">
+                                        <h1 style="float: right">12</h1>
+                                        <div align="right">New Tasks!</div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <a href="#" style="color:green">View Details<div style="float:right">></div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5"> 
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">
+                                    <div>
+                                        <img src="./e.png" height="70px">
+                                        <h1 style="float: right">124</h1>
+                                        <div align="right">
+                                            New Orders!
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="panel-footer">
+                                        <a href="#" style="color:orange">View Details<div style="float:right">></div></a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">    
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">
+                                    <div>
+                                        <img src="./f.png" height="70px">
+                                        <h1 style="float: right">13</h1>
+                                        <div align="right">
+                                            Support Tickets!
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="panel-footer">
+                                        <a href="#" style="color:red">View Details<div style="float:right">></div></a>
+                                    </div>
+                            </div>
+                        </div>
+             </div>
+        </div>
+        <span>
+        <div>
+            <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <img src="./q.png" height="17px">&nbsp;Area Chart Example
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                Actions
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right" role="menu">
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div id="chartContainer1" style="height: 300px; width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div>
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <img src="./w.png" height="17px">&nbsp;Notifications Panel
+                </div>
+                <div class="panel-body">
+                    <div class="btn-group-vertical">
+                    <a href="#">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                            <img src="./1.0.png" height="15px" width="15px">
+                            &nbsp;New Comment
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="lighter"><em>4 minutes ago</em></span>
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                            <img src="./2.0.png" height="15px" width="15px">
+                            &nbsp;3 New Followers
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                            <span class="lighter"><em>12 minutes ago</em></span>
+                        </button>
+                    </a>
+                    <a href-"#">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                            <img src="./email.png" height="15px" width="15px">
+                            &nbsp;Message Sent
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                            <span class="lighter"><em>27 minutes ago</em></span>
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                            <img src="./3.0.png" height="15px" width="15px">
+                            &nbsp;New Task
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+                            <span class="lighter"><em>43 minutes ago</em></span>
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                            <img src="./4.0.png" height="15px" width="15px">
+                            &nbsp;Server Reboot
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                            <span class="lighter"><em>11:32 AM</em></span>
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                            <img src="./10.png" height="15px" width="15px">
+                            &nbsp;Server Crashed!
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="lighter"><em>11:13 AM</em></span>
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                            <img src="./11.png" height="15px" width="15px">
+                            &nbsp;Server Not Responding
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="lighter"><em>10:57 AM</em></span>
+                        </button> 
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                            <img src="./13.png" height="15px" width="15px">
+                            &nbsp;New Order placed
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;
+                            <span class="lighter"><em>9:49 AM</em></span>
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                            <img src="./14.png" height="15px" width="15px">
+                            &nbsp;Payment Received
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;
+                            <span class="lighter"><em>Yesterday</em></span>
+                        </button>
+                    </a>
+                    </div>
+                    <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        View All Alerts
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+        </span>
+        <br>
+        <span>
+        <div class="col-lg-6">
+        <div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <img src="./q.png" height="17px">&nbsp;Bar Chart Example
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                Actions
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right" role="menu">
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-4">
+                        <div>
+                            <table border="1px solid gray" class="pad">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="background: lightgrey;">
+                                        <td style="padding:2 2">3326</td>
+                                        <td style="padding:2 2">10/21/2013</td>
+                                        <td style="padding:2 2">3:29 PM</td>
+                                        <td style="padding:2 2">$321.33</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:2 2">3325</td>
+                                        <td style="padding:2 2">10/21/2013</td>
+                                        <td style="padding:2 2">3:20 PM</td>
+                                        <td style="padding:2 2">$234.34</td>
+                                    </tr>
+                                    <tr style="background: lightgrey">
+                                        <td style="padding:2 2">3324</td>
+                                        <td style="padding:2 2">10/21/2013</td>
+                                        <td style="padding:2 2">3:03 PM</td>
+                                        <td style="padding:2 2">$724.17</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:2 2">3323</td>
+                                        <td style="padding:2 2">10/21/2013</td>
+                                        <td style="padding:2 2">3:00 PM</td>
+                                        <td style="padding:2 2">$23.71</td>
+                                    </tr>
+                                    <tr style="background: lightgrey">
+                                        <td style="padding:2 2">3322</td>
+                                        <td style="padding:2 2">10/21/2013</td>
+                                        <td style="padding:2 2">2:49 PM</td>
+                                        <td style="padding:2 2">$8345.23</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:2 2">3321</td>
+                                        <td style="padding:2 2">10/21/2013</td>
+                                        <td style="padding:2 2">2:23 PM</td>
+                                        <td style="padding:2 2">$245.12</td>
+                                    </tr>
+                                    <tr style="background: lightgrey">
+                                        <td style="padding:2 2">3320</td>
+                                        <td style="padding:2 2">10/21/2013</td>
+                                        <td style="padding:2 2">2:15 PM</td>
+                                        <td style="padding:2 2">$5663.54</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:2 2">3319</td>
+                                        <td style="padding:2 2">10/21/2013</td>
+                                        <td style="padding:2 2">2:13 PM</td>
+                                        <td style="padding:2 2">$943.45</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="chartContainer3" style="height: 300px; width: 100%;">
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4">
+        <div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <img src="./q.png" height="17px">&nbsp;Donut Chart Example
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                Actions
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right" role="menu">
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                        <div id="chartContainer2" style="height: 300px; width: 100%;">
+                            </div>
+                            <br>
+                            <div>
+                                <button type="button" class="btn btn-light" style="border: 1px solid gray">
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                    View Details
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+                                </button>
+                            </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </span>
+        <br>
+        <span>
+        <div class="col-lg-6">
+        <div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <img src="./r.png" height="17px">&nbsp;Responsive Timeline
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <div>
+                          <div>
+                            <h4>Lorem ipsum dolor</h4>
+                            <span class="lighter" style="font-size: 12px"><img src="./r.png" height="12px">&nbsp;11 hours ago via Twitter</span>
+                            <p><br>Lorem ipsum dolor sit amet, consectetur<br>
+                             adipisicing elit. Libero laboriosam dolor<br> 
+                             perspiciatis omnis exercitationem. Beatae, officia<br>
+                             pariatur? Est cum veniam excepturi. Maiores<br>
+                             praesentium, porro voluptas suscipit facere rem<br>
+                             dicta, debitis.</p>
+                          </div>
+                        </div>
+                        <div>
+                            <div align="right">
+                                <h4>Lorem ipsum dolor</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur<br>
+                                    adipisicing elit. Libero laboriosam dolor<br> 
+                                    perspiciatis omnis exercitationem. Beatae, officia<br>
+                                    pariatur? Est cum veniam excepturi. Maiores<br>
+                                    praesentium, porro voluptas suscipit facere rem<br>
+                                    dicta, debitis.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h4>Lorem ipsum dolor</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur<br>
+                                    adipisicing elit. Libero laboriosam dolor<br> 
+                                    perspiciatis omnis exercitationem. Beatae, officia<br>
+                                    pariatur? Est cum veniam excepturi. Maiores<br>
+                                    praesentium, porro voluptas suscipit facere rem<br>
+                                    dicta, debitis.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div align="right">
+                                <h4>Lorem ipsum dolor</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur<br>
+                                    adipisicing elit. Libero laboriosam dolor<br> 
+                                    perspiciatis omnis exercitationem. Beatae, officia<br>
+                                    pariatur? Est cum veniam excepturi. Maiores<br>
+                                    praesentium, porro voluptas suscipit facere rem<br>
+                                    dicta, debitis.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h4>Lorem ipsum dolor</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur<br>
+                                    adipisicing elit. Libero laboriosam dolor<br> 
+                                    perspiciatis omnis exercitationem. Beatae, officia<br>
+                                    pariatur? Est cum veniam excepturi. Maiores<br>
+                                    praesentium, porro voluptas suscipit facere rem<br>
+                                    dicta, debitis.</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                            <img src="./55.png" height="15px" width="15px"><span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h4>Lorem ipsum dolor</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur<br>
+                                    adipisicing elit. Libero laboriosam dolor<br> 
+                                    perspiciatis omnis exercitationem. Beatae, officia<br>
+                                    pariatur? Est cum veniam excepturi. Maiores<br>
+                                    praesentium, porro voluptas suscipit facere rem<br>
+                                    dicta, debitis.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div align="right">
+                                <h4>Lorem ipsum dolor</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur<br>
+                                    adipisicing elit. Libero laboriosam dolor<br> 
+                                    perspiciatis omnis exercitationem. Beatae, officia<br>
+                                    pariatur? Est cum veniam excepturi. Maiores<br>
+                                    praesentium, porro voluptas suscipit facere rem<br>
+                                    dicta, debitis.</p>
+                            </div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4">
+        <div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <img src="./t.png" height="25px">&nbsp;Chat
+                <div class="pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li><a href="#"><img src="./90.png" height="14px">&nbsp;Refresh</a>
+                            </li>
+                            <li><a href="#"><img src="./91.png" height="15px">&nbsp;Available</a>
+                            </li>
+                            <li><a href="#"><img src="./92.png" height="12px">&nbsp;Busy</a>
+                            </li>
+                            <li><a href="#"><img src="./r.png" height="12px">&nbsp;Away</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#"><img src="./7.0.png" height="15px">&nbsp;Sign Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <img src="./111.png" height="70px" width="70px" style="float: left;">
+                        <span>
+                            <span style="font-weight: bold">Jack Sparrow</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                            <span class="lighter"><img src="./r.png" height="12px">&nbsp;12 mins ago</span><br>
+                            Lorem ipsum dolor sit amet, consectetur<br>
+                            adipiscing elit. Curabitur bibendum ornare<br>
+                            dolor, quis ullamcorper ligula sodales.
+                            <hr>
+                        </span>
+                    </div>
+                    <div>
+                            <img src="./222.png" height="70px" style="float: right;">
+                            <span>
+                                <span class="lighter"><img src="./r.png" height="12px">&nbsp;13 mins ago</span>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <span style="font-weight: bold">Bhaumik Patel</span><br>
+                                Lorem ipsum dolor sit amet, consectetur<br>
+                                adipiscing elit. Curabitur bibendum ornare<br>
+                                dolor, quis ullamcorper ligula sodales.
+                                <hr>
+                            </span>
+                        </div>
+                        <div>
+                        <img src="./111.png" height="70px" width="70px" style="float: left;">
+                        <span>
+                            <span style="font-weight: bold">Jack Sparrow</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                            <span class="lighter"><img src="./r.png" height="12px">&nbsp;14 mins ago</span><br>
+                            Lorem ipsum dolor sit amet, consectetur<br>
+                            adipiscing elit. Curabitur bibendum ornare<br>
+                            dolor, quis ullamcorper ligula sodales.
+                            <hr>
+                        </span>
+                    </div>
+                    <div>
+                            <img src="./222.png" height="70px" style="float: right;">
+                            <span>
+                                <span class="lighter"><img src="./r.png" height="12px">&nbsp;15 mins ago</span>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <span style="font-weight: bold">Bhaumik Patel</span><br>
+                                Lorem ipsum dolor sit amet, consectetur<br>
+                                adipiscing elit. Curabitur bibendum ornare<br>
+                                dolor, quis ullamcorper ligula sodales.
+                                <hr>
+                            </span>
+                        </div>
+                </div>
+                <div class="panel-footer">
+                    <input type="text" placeholder="Type your message here..." size="45">
+                    <button type="button" style="background: orange; border-radius:0.2rem ">Send</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        </span>
+    </body>
+</html>
